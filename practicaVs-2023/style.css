@@ -1,0 +1,271 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.events {
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #de411b;
+}
+
+.events .event {
+  width: 300px;
+  border: 1px solid #ebf1f6;
+  box-shadow: 0 0 2px 0 rgba(145,158,171,.2), 0 12px 24px -4px rgba(145,158,171,.12);
+}
+
+.event-title {
+  color: #050100;
+  font-size: 1.2rem;
+  align-items: center;
+  font-style:inherit;
+  font-weight: bold; 
+  margin: 8px 0;
+}
+
+.event img {
+  height: 150px;
+  max-width: 100%;
+  margin-bottom: 40px;
+  height: auto;
+}
+
+#ticketType {
+  width: 100%;
+}
+
+.actions {
+  flex-wrap: wrap;
+}
+
+.quantity {
+  margin: 12px auto;
+}
+
+#page-header {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+.link-item {
+  color: #de411b
+}
+
+.logo {
+  height: 50px;
+  padding: 6px;
+}
+
+.add-btn {
+  background-color: #de411b;
+}
+
+.add-to-cart-btn {
+  background: #de411b;
+  margin: 22px auto;
+  display: block;
+  width: 100%;
+}
+
+.main-content-component {
+  margin-bottom: 40px;
+}
+
+.event-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+
+.ticket-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Add this to your existing CSS styles */
+.custom-buy-button {
+  background-color: hsl(97, 94%, 86%); 
+  color: #000000; /* Text color */
+  border: 1px solid #44be01; /* Change this to your desired border color */
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-buy-button:hover {
+  background: #b8fe7b; /* Change this to a slightly darker shade for hover effect */
+  box-shadow: 0 0 5px #b8fe7b, 0 0 25px
+    #b8fe7b, 0 0 #b8fe7b, 0 0 200px #b8fe7b;
+}
+
+.event-details-button {
+  background-color: hsl(0, 85%, 90%); 
+  color: #000000; /* Text color */
+  border: 1px solid #cb2301; /* Change this to your desired border color */
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+
+.event-details-button:hover {
+  background: #f9aa86; /* Change this to a slightly darker shade for hover effect */
+  box-shadow: 0 0 5px #f9aa86, 0 0 25px
+    #f9aa86, 0 0 #f9aa86, 0 0 200px #f9aa86;
+}
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.event-details {
+  padding: 10px 0;
+}
+
+/* Additional styling for event details */
+#eventName, #eventDate, #eventDescription {
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px; /* Adjust this to control the vertical centering */
+}
+
+/* Add a border to the search button */
+#searchButton {
+  padding: 8px 16px;
+  border: 1px solid #333; /* Adjust border color and thickness */
+  background-color: #fbf6f6; /* Adjust background color */
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style for the ticket quantity input and buttons */
+.ticket-quantity {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-input {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: none;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 100px; /* Adjust width as needed */
+  margin-right: 30px; /* Adjust margin as needed */
+}
+
+.ticket-input::-webkit-inner-spin-button,
+.ticket-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Style for the increment and decrement buttons */
+.ticket-quantity button.increment-button,
+.ticket-quantity button.decrement-button {
+  display: flex; /* Display as flex container */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.ticket-quantity button.increment-button {
+  background-color: rgb(172, 244, 247);
+}
+
+.ticket-quantity button.decrement-button {
+  background-color: rgb(244, 113, 174);
+}
+
+/* Apply borders to the "Standard" and "VIP" options in the select dropdown */
+.ticket-category-select {
+  border: 1px solid #ccc; /* Default border */
+  padding: 5px;
+}
+
+.ticket-category-select option[value="1"] {
+  border: 1px solid blue; /* Border for "Standard" option */
+  padding: 5px;
+}
+
+.ticket-category-select option[value="2"] {
+  border: 1px solid green; /* Border for "VIP" option */
+  padding: 5px;
+}
+
+
+
+.ordersTable th,
+.ordersTable td {
+  padding: 80px; /* Adjust the padding as needed */
+}
+
+
+
+
+
+
+
+
